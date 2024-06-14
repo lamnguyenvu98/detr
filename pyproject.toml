@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DETR"
+version = "1.0.0"
+authors = [
+    {name = "Vu Lam Nguyen", email = "lamnguyenvu98@gmail.com"},
+]
+description = "DE⫶TR: End-to-End Object Detection with Transformers"
+requires-python = "==3.11.*"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools]
+packages = [
+    "src",
+    "src.datasets",
+    "src.models",
+    "src.util"
+]
+
+# [project.scripts]
+# server-run = "src.__main__:main"
