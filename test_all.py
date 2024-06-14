@@ -6,11 +6,11 @@ import torch
 from torch import nn, Tensor
 from typing import List
 
-from models.matcher import HungarianMatcher
-from models.position_encoding import PositionEmbeddingSine, PositionEmbeddingLearned
-from models.backbone import Backbone, Joiner, BackboneBase
-from util import box_ops
-from util.misc import nested_tensor_from_tensor_list
+from src.models.matcher import HungarianMatcher
+from src.models.position_encoding import PositionEmbeddingSine, PositionEmbeddingLearned
+from src.models.backbone import Backbone, Joiner, BackboneBase
+from src.util import box_ops
+from src.util.misc import nested_tensor_from_tensor_list
 from hubconf import detr_resnet50, detr_resnet50_panoptic
 
 # onnxruntime requires python 3.5 or above
